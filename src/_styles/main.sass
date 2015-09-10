@@ -1,0 +1,245 @@
+// Normalize Styles
+@import node_modules/normalize.css/normalize
+@import node_modules/semantic-ui/dist/semantic.min
+
+
+// Import Modules§
+@import ../_modules/link/link
+
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+.left.circusfont
+  left: 0
+.right.circusfont
+  right: 0
+
+.rail-special .image.moving
+  display: inline-block !important
+  position: fixed !important
+  &:nth-child(1)
+    top: -75px !important
+    left: 50px
+  &:nth-child(2)
+    top: -60px !important
+    left: 120px
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: swingr;
+    -webkit-animation-timing-function: ease-in-out;
+
+    -moz-animation-direction: normal;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: swingr;
+    -moz-animation-timing-function: ease-in-out;
+  &:nth-child(3)
+    top: -80px !important
+    left: 190px
+  transform-origin: 50% 0%
+  @-moz-keyframes swing
+    0%
+      -moz-transform:rotate(-30deg)
+    50%
+      -moz-transform:rotate(30deg)
+    100%
+      -moz-transform:rotate(-30deg)
+  @-webkit-keyframes swing
+    0%
+      -webkit-transform:rotate(-30deg)
+    50%
+      -webkit-transform:rotate(30deg)
+    100%
+      -webkit-transform:rotate(-30deg)
+  @-moz-keyframes swingr
+    0%
+      -moz-transform:rotate(25deg)
+    50%
+      -moz-transform:rotate(-25deg)
+    100%
+      -moz-transform:rotate(25deg)
+  @-webkit-keyframes swingr
+    0%
+      -webkit-transform:rotate(25deg)
+    50%
+      -webkit-transform:rotate(-25deg)
+    100%
+      -webkit-transform:rotate(25deg)
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: swing;
+  -webkit-animation-timing-function: ease-in-out;
+
+  -moz-animation-direction: normal;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: swing;
+  -moz-animation-timing-function: ease-in-out;
+
+.circusfont
+  display: inline-block
+  position: absolute
+  top: 0
+  padding: 35px
+  font-family: 'Passion One', cursive
+  color: rgb(200, 30, 90)
+  font-size: 3em
+  text-shadow: 10px 10px 25px rgba(200,30,70, .5)
+  @-webkit-keyframes blink
+    0%
+        opacity:1
+    5%
+      opacity:.1
+    7%
+      opacity:1
+    10%
+      opacity:.3
+    12%
+      opacity:.9
+    15%
+      opacity:.25
+    20%
+      opacity: .8
+    30%
+      opacity: 1
+    40%
+      opacity: 1
+    50%
+        opacity:0
+    55%
+      opacity:.7
+    60%
+      opacity:.1
+    65%
+      opacity:.3
+    73%
+      opacity: 1
+    80%
+      opacity: 0
+    100%
+        opacity:1
+  @-moz-keyframes blink
+    0%
+        opacity:1
+    5%
+      opacity:.1
+    7%
+      opacity:1
+    10%
+      opacity:.3
+    12%
+      opacity:.9
+    15%
+      opacity:.25
+    20%
+      opacity: .8
+    30%
+      opacity: 1
+    40%
+      opacity: 1
+    50%
+        opacity:0
+    55%
+      opacity:.7
+    60%
+      opacity:.1
+    65%
+      opacity:.3
+    73%
+      opacity: 1
+    80%
+      opacity: 0
+    100%
+        opacity:1
+
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: blink;
+  -webkit-animation-timing-function: ease-in-out;
+
+  -moz-animation-direction: normal;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: blink;
+  -moz-animation-timing-function: ease-in-out;
+
+body, html
+  margin: 0 0 0 0 !important
+  padding: 0 0 0 0 !important
+  border: 0 !important
+
+body
+  margin-top: 100px !important
+  background-image: url(../images/subtle_white_feathers/subtle_white_feathers/subtle_white_feathers.png)
+
+.menu
+  margin-top: -15px
+  border-top: 0 !important
+  padding-top: 0 !important
+  border-bottom: 5px solid rgba(200,50,70, .5) !important
+  &:hover
+    box-shadow: 0 0 25px rgba(200,30,90, .5) !important
+  &:active
+    box-shadow: 0 0 25px rgba(200,30,90, .75) !important
+  .item:active
+    color: rgb(200,30,90) !important
+
+.ui.divided.items .item .image img
+  border: 1px solid black
+  border-top-left-radius: 5em
+  border-bottom-left-radius: 1em
+.ui.inverted.content
+  border: 1px
+  border-style: solid
+  border-color: rgb(200,30,90) !important
+  background-image: url(../images/grey_wash_wall/grey_wash_wall/grey_wash_wall.png) !important
+  color: white
+  text-shadow: 0 0 5px black !important
+  padding-top: 15px !important
+
+.ui.rail
+  position: fixed
+  top: 100px
+.ui.right.rail
+  transform: translateX(-100%)
+  margin-left: -25px
+.ui.left.rail
+  transform: translateX(100%)
+  margin-left: 25px
+
+.version
+  font-size: 14px
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace
+  position: absolute
+  bottom: 10px
+  right: 10px
+
+// Styling on warning for users on IE7 or below
+.browsehappy
+  text-align: center
+  margin: 0
+  background: #fff8e2
+  color: #000
+  padding: 0.5em 0
