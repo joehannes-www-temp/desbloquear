@@ -4,7 +4,6 @@ include _modules/link/link
 
 block content
   .ui.fixed.inverted.labeled.icon.menu
-    .circusfont.left Desbloquear To...
     .ui.center.aligned.container
       a.item
         i.big.icon.home
@@ -24,16 +23,21 @@ block content
       a.item.right.aligned
         i.big.info.circle.icon
         | Nosotros
-    .circusfont.right Santiago de los 30
   .ui.left.rail-special
     .ui.image.moving: img(src="./images/iphone_hanging.png")
     .ui.image.moving: img(src="./images/xperia_hanging.png")
     .ui.image.moving: img(src="./images/galaxy_hanging.png")
-  .ui.center.aligned.justified.container
-    h3: p.ui.stacked.segment Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  .ui.center.aligned.justified.container.maincontent
+    h3
     .ui.divided.items
       .item
-        .ui.image: img(src="./images/iphone.jpg")
+        .ui.small.image: img(src="./images/flowers.jpg")
+        .ui.inverted.hero.content Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        .ui.small.image: img(src="./images/finger.jpg")
+      .item
+        .ui.image
+          .ui.pink.ribbon.label NUEVO!
+          img(src="./images/iphone.jpg")
         .ui.inverted.content
           a.header Iphone 6, Iphone 6plus
           .meta Desbloquear la baina!
@@ -46,7 +50,9 @@ block content
               i.icon.big.privacy
               a Cuando?
       .item
-        .ui.image: img(src="./images/galaxy.jpg")
+        .ui.image
+          .ui.pink.ribbon.label VIEJO!
+          img(src="./images/galaxy.jpg")
         .ui.inverted.content
           a.header Samsung Galaxy
           .meta Desbloquear la baina!
@@ -59,35 +65,39 @@ block content
               i.icon.big.privacy
               a Cuando?
       .item
-        .ui.image: img(src="./images/xperia.jpg")
+        .ui.image
+          .ui.green.ribbon.label OFERTA!
+          img(src="./images/xperia.jpg")
         .ui.inverted.content
           a.header Sony Xperia
           .meta Desbloquear la baina!
           .description Nosotros desbloqueamos tu telefono en ningun tiempo, relajarte!
-          .extra.bottom.aligned
+          .extra
             .ui.label
               i.icon.big.settings 
               a Como?
             .ui.label
               i.icon.big.privacy
               a Cuando?
-
-    .ui.segment
-      p Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
-      p Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
-      p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   
-      p Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   
-      p At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-  .ui.right.rail
+      br
+      .ui.piled.segment.no-padding.no-margin
+        .inverted.content
+          p Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+          p Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+          p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   
+          p Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+          p At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+      p &nbsp;
+  .ui.header.overlay.hidden
     .ui.card
-      .ui.medium.circular.image: img(src="./images/joehannes.jpg")
+      .ui.image: img(src="./images/joehannes.jpg")
       .ui.inverted.content
         a.header Mister Johannes
         .meta Desbloqueador in spe!
         .description Crea la pagina como nada y ya :)
       .extra.bottom.aligned
         .ui.label
-          i.icon.big.settings 
+          i.icon.big.settings
           a Como?
         .ui.label
           i.icon.big.privacy

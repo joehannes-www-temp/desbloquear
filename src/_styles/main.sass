@@ -24,72 +24,73 @@
 .rail-special .image.moving
   display: inline-block !important
   position: fixed !important
+
   &:nth-child(1)
-    top: -75px !important
-    left: 50px
+    top: 60px !important
+    left: 30px !important
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: swing;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-direction: normal;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: swing;
+    -moz-animation-timing-function: ease-in-out;
   &:nth-child(2)
-    top: -60px !important
-    left: 120px
+    top: 70px !important
+    left: 100px !important
     -webkit-animation-direction: normal;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-name: swingr;
+    -webkit-animation-name: swing2;
     -webkit-animation-timing-function: ease-in-out;
-
     -moz-animation-direction: normal;
     -moz-animation-duration: 3s;
     -moz-animation-iteration-count: infinite;
-    -moz-animation-name: swingr;
+    -moz-animation-name: swing2;
     -moz-animation-timing-function: ease-in-out;
   &:nth-child(3)
-    top: -80px !important
-    left: 190px
+    top: 0px !important
+    left: 155px
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: swing3;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-direction: normal;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: swing3;
+    -moz-animation-timing-function: ease-in-out;
   transform-origin: 50% 0%
-  @-moz-keyframes swing
+  @keyframes swing
     0%
-      -moz-transform:rotate(-30deg)
+      transform:rotate(-10deg)
     50%
-      -moz-transform:rotate(30deg)
+      transform:rotate(10deg)
     100%
-      -moz-transform:rotate(-30deg)
-  @-webkit-keyframes swing
+      transform:rotate(-10deg)
+  @keyframes swing2
     0%
-      -webkit-transform:rotate(-30deg)
+      transform:rotate(-8deg)
     50%
-      -webkit-transform:rotate(30deg)
+      transform:rotate(8deg)
     100%
-      -webkit-transform:rotate(-30deg)
-  @-moz-keyframes swingr
+      transform:rotate(-8deg)
+  @keyframes swing3
     0%
-      -moz-transform:rotate(25deg)
+      transform:rotate(10deg)
     50%
-      -moz-transform:rotate(-25deg)
+      transform:rotate(-10deg)
     100%
-      -moz-transform:rotate(25deg)
-  @-webkit-keyframes swingr
-    0%
-      -webkit-transform:rotate(25deg)
-    50%
-      -webkit-transform:rotate(-25deg)
-    100%
-      -webkit-transform:rotate(25deg)
+      transform:rotate(10deg)
   -webkit-transition: all 2s ease-in-out;
   -moz-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   -ms-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
-
-  -webkit-animation-direction: normal;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: swing;
-  -webkit-animation-timing-function: ease-in-out;
-
-  -moz-animation-direction: normal;
-  -moz-animation-duration: 2s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-name: swing;
-  -moz-animation-timing-function: ease-in-out;
 
 .circusfont
   display: inline-block
@@ -185,10 +186,6 @@
   -moz-animation-name: blink;
   -moz-animation-timing-function: ease-in-out;
 
-body, html
-  margin: 0 0 0 0 !important
-  padding: 0 0 0 0 !important
-  border: 0 !important
 
 body
   margin-top: 100px !important
@@ -206,37 +203,70 @@ body
   .item:active
     color: rgb(200,30,90) !important
 
-.ui.divided.items .item .image img
-  border: 1px solid black
-  border-top-left-radius: 5em
-  border-bottom-left-radius: 1em
-.ui.inverted.content
-  border: 1px
-  border-style: solid
-  border-color: rgb(200,30,90) !important
+.ui.divided.items .item:not(:first-child)
+  transition: all 1s ease-in-out
+  &:hover
+    .image img
+      box-shadow: 0 0 15px rgb(200,30,90)
+    .content
+      box-shadow: 0 0 25px rgb(33,186,69)
+  .content
+    box-shadow: 0 0 25px rgba(200,30,90, .3)
+    border: 1px solid rgb(200,30,90)
+    border-top-right-radius: 1em
+    border-bottom-right-radius: 5em
+
+.ui.divided.items .item:first-child
+  .image
+    img
+      border: 3px solid rgb(33,186,69)
+    &:nth-child(1) img
+      border-top-left-radius: 5em
+      border-bottom-left-radius: 1em
+      border-right: none;
+      box-shadow: -5px 0 15px rgba(200,30,90, .7)
+    &:nth-child(3) img
+      border-top-right-radius: 5em
+      border-bottom-rigth-radius: 1em
+      border-left: none;
+      box-shadow: 5px 0 15px rgba(200,30,90, .7)
+  .hero.content
+    padding: 25px
+    border: 1px solid black
+    border-color: black !important
+
+.ui.divided.items .item:not(:first-child)
+  img
+    border-top-left-radius: 1em
+    border-bottom-left-radius: 1em
+    border: 1px solid black
+  &:nth-child(1) img
+    border-top-right-radius: 1em
+    border-bottom-right-radius: 5em
+
+.inverted.content
   background-image: url(../images/grey_wash_wall/grey_wash_wall/grey_wash_wall.png) !important
-  color: white
-  text-shadow: 0 0 5px black !important
-  padding-top: 15px !important
+  padding: 25px !important
 
 .ui.rail
   position: fixed
   top: 100px
 .ui.right.rail
   transform: translateX(-100%)
-  margin-left: -25px
 .ui.left.rail
   transform: translateX(100%)
-  margin-left: 25px
-
-.version
-  font-size: 14px
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace
-  position: absolute
-  bottom: 10px
-  right: 10px
-
-// Styling on warning for users on IE7 or below
+.ui.header.overlay
+  position: fixed
+  display: inline-block
+  top: 60px
+  right: 10%
+  box-shadow: 0 20px 100px black
+.hidden
+  display: none !important
+.no-padding
+  padding: 0 !important
+.no-margin
+  margin: 0 !important
 .browsehappy
   text-align: center
   margin: 0
